@@ -1,0 +1,4 @@
+name: NUll-SMP
+version: '1.0-SNAPSHOT'
+main: org.tick.nUllSMP.NUllSMP
+api-version: '1.21'
