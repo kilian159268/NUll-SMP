@@ -63,6 +63,24 @@ public class MainCommand implements CommandExecutor, TabCompleter {
         }
 
 
-        return list;
+
+
+
+        ArrayList<String> completes = new ArrayList<>();
+
+        String arg = args[args.length-1];
+
+        for (String s : list) {
+
+            String s1 = s.toLowerCase();
+            if (s1.startsWith(arg.toLowerCase())) {
+                completes.add(s);
+
+            }
+
+        }
+
+        return completes;
+
     }
 }
