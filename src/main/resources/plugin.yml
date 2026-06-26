@@ -5,4 +5,6 @@ api-version: '1.21'
 authors:
   - Veloc
   - HBxxxxx
-
+commands:
+  null-smp:
+    description: This is the main command for Null-SMP!

@@ -12,14 +12,13 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainCommand implements CommandExecutor/*, TabCompleter*/ {
+public class MainCommand implements CommandExecutor, TabCompleter {
 
-    String mainPrefix = "§8[7Null-SMP§8]§r ";
+    String mainPrefix = "§8[§f§lNull-SMP§8]§r ";
 
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String @NotNull [] args) {
-
 
 
         if (!(sender instanceof Player player)) {
@@ -31,23 +30,25 @@ public class MainCommand implements CommandExecutor/*, TabCompleter*/ {
 
 
         if (args.length == 0) {
-            player.sendMessage(mainPrefix + "§7You have to name an argument! Please Use /null help!");
+            player.sendMessage(mainPrefix + "§7Please Use /null-smp help for more info!");
             return true;
         }
 
         if (args[0].equalsIgnoreCase("help")) {
-            player.sendMessage(ChatColor.DARK_GRAY + "§l----------" + ChatColor.GRAY + "§l[Friends-Help]" + ChatColor.DARK_GRAY + "§l----------");
-            player.sendMessage(ChatColor.GRAY + "- /null help | To open this page.");
+            player.sendMessage(ChatColor.DARK_GRAY + "§l----------" + ChatColor.GRAY + "§l[Null-SMP-Help]" + ChatColor.DARK_GRAY + "§l----------");
+            player.sendMessage(ChatColor.GRAY + "- /null-smp help | To open this page.");
             player.sendMessage(ChatColor.DARK_GRAY + "§l---------------------------------");
             return true;
         }
 
 
 
+        player.sendMessage(mainPrefix + "§7Wrong Argument please Use /null-smp help for more info!");
+
         return true;
     }
 
-/*
+
     @Override
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String @NotNull [] args) {
 
@@ -62,8 +63,6 @@ public class MainCommand implements CommandExecutor/*, TabCompleter*/ {
         }
 
 
-        return List.of();
+        return list;
     }
-
- */
 }
