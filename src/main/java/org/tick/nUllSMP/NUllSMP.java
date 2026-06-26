@@ -7,7 +7,7 @@ public final class NUllSMP extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-
+        //say Hello
     }
 
     @Override
@@ -15,4 +15,3 @@ public final class NUllSMP extends JavaPlugin {
         // Plugin shutdown logic
     }
 }
-FEmboy auf die 1
