@@ -1,6 +1,7 @@
 package org.tick.nUllSMP;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.tick.nUllSMP.commands.MainCommand;
 
 public final class NUllSMP extends JavaPlugin {
 
@@ -11,6 +12,8 @@ public final class NUllSMP extends JavaPlugin {
         // Plugin startup logic
 
         System.out.println(consolePrefix + "Null-SMP Plugin has been enabled!");
+
+        getCommand("null").setExecutor(new MainCommand());
 
     }
 

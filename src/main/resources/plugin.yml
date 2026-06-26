@@ -1,4 +1,13 @@
 name: NUll-SMP
-version: '1.0-SNAPSHOT'
+version: '1.0'
 main: org.tick.nUllSMP.NUllSMP
 api-version: '1.21'
+authors:
+  - HBxxxxx
+  - Veloc
+commands:
+  null:
+
+
+
+
