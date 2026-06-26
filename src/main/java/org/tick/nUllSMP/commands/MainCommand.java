@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainCommand implements CommandExecutor, TabCompleter {
+public class MainCommand implements CommandExecutor/*, TabCompleter*/ {
 
     String mainPrefix = "§8[7Null-SMP§8]§r ";
 
@@ -20,14 +20,15 @@ public class MainCommand implements CommandExecutor, TabCompleter {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String @NotNull [] args) {
 
-        Player player = (Player) sender;
 
-        if (!(sender instanceof Player)) {
+
+        if (!(sender instanceof Player player)) {
 
             sender.sendMessage(mainPrefix + "§7This command is not send by a Player!");
             return true;
 
         }
+
 
         if (args.length == 0) {
             player.sendMessage(mainPrefix + "§7You have to name an argument! Please Use /null help!");
@@ -46,7 +47,7 @@ public class MainCommand implements CommandExecutor, TabCompleter {
         return true;
     }
 
-
+/*
     @Override
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String @NotNull [] args) {
 
@@ -63,4 +64,6 @@ public class MainCommand implements CommandExecutor, TabCompleter {
 
         return List.of();
     }
+
+ */
 }

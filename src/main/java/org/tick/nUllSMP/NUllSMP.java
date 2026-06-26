@@ -13,7 +13,7 @@ public final class NUllSMP extends JavaPlugin {
 
         System.out.println(consolePrefix + "Null-SMP Plugin has been enabled!");
 
-        getCommand("null").setExecutor(new MainCommand());
+     //   getCommand("null").setExecutor(new MainCommand());
 
     }
 
